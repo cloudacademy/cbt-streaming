@@ -52,7 +52,7 @@ import com.google.protobuf.ByteString;
 @SuppressWarnings("serial")
 public class BigtableHelper {
 
-  private final static String INSTANCE_ID = "sandiego";
+  private final static String INSTANCE_ID = "ca-lab-instance";
   private final static String TABLE_ID    = "current_conditions";
   private final static String CF_FAMILY   = "lane";
 
