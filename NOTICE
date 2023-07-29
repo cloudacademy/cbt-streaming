@@ -1,1 +1,1 @@
-This repo is a pruned version (removed extra files and git history saving ~2.2GB) of https://github.com/GoogleCloudPlatform/training-data-analyst for bigtable streaming.
+This repo is a pruned version (removed extra files and git history saving ~2.2GB) of https://github.com/GoogleCloudPlatform/training-data-analyst focused dataflow streaming into bigtable. Adapted to use Java 11, Python 3.10+, and a newer Python pubsub library version.
