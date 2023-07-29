@@ -81,7 +81,7 @@ def peek_timestamp(ifp):
 if __name__ == '__main__':
    parser = argparse.ArgumentParser(description='Send sensor data to Cloud Pub/Sub in small groups, simulating real-time behavior')
    parser.add_argument('--speedFactor', help='Example: 60 implies 1 hour of data sent to Cloud Pub/Sub in 1 minute', required=True, type=float)
-   parser.add_argument('--project', help='Example: --project $DEVSHELL_PROJECT_ID', required=True)
+   parser.add_argument('--project', help='Example: --project $PROJECT_ID', required=True)
    args = parser.parse_args()
 
    # create Pub/Sub notification topic

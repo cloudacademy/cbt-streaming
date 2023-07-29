@@ -85,6 +85,7 @@ public class CurrentConditions {
       BigtableHelper.writeToBigtable(currentConditions, options);
     }
 
+    /* skip bigquery
     currentConditions.apply("ToBQRow", ParDo.of(new DoFn<LaneInfo, TableRow>() {
       @ProcessElement
       public void processElement(ProcessContext c) throws Exception {
@@ -105,7 +106,8 @@ public class CurrentConditions {
             .withSchema(schema)//
             .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND)
             .withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_IF_NEEDED));
-
+    */
+   
     p.run();
   }
 }

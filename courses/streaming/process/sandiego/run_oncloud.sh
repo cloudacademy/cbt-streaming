@@ -15,13 +15,15 @@ shift
 
 echo "Launching $MAIN project=$PROJECT bucket=$BUCKET $*"
 
-export PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin/:$PATH
+export PATH=/usr/lib/jvm/java-11-openjdk-amd64/bin/:$PATH
 mvn compile -e exec:java \
  -Dexec.mainClass=$MAIN \
       -Dexec.args="--project=$PROJECT \
       --stagingLocation=gs://$BUCKET/staging/ $* \
       --tempLocation=gs://$BUCKET/staging/ \
-      --runner=DataflowRunner"
+      --runner=DataflowRunner \
+      --workerMachineType=n1-standard-1 \
+      --maxNumWorkers=1"
 
 
 # If you run into quota problems, add this option the command line above
