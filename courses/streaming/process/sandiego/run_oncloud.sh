@@ -16,7 +16,7 @@ shift
 echo "Launching $MAIN project=$PROJECT bucket=$BUCKET $*"
 
 export PATH=/usr/lib/jvm/java-11-openjdk-amd64/bin/:$PATH
-mvn compile -e exec:java \
+mvn exec:java \
  -Dexec.mainClass=$MAIN \
       -Dexec.args="--project=$PROJECT \
       --stagingLocation=gs://$BUCKET/staging/ $* \
